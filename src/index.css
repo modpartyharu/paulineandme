@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Noto+Sans+KR:wght@300;400;500&family=DM+Mono&family=Nunito:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root, [data-theme="blush"] {
+  --bg: #FDF8F6;
+  --surface: #FFFFFF;
+  --surface-2: #FDF0EE;
+  --surface-3: #F8EAE6;
+  --text: #2D1F1A;
+  --text-2: #7A6560;
+  --text-3: #C0A8A0;
+  --text-inv: #FFFFFF;
+  --accent: #E8A598;
+  --accent-dark: #D4877A;
+  --accent-light: #F8E8E4;
+  --accent-subtle: #FDF5F3;
+  --me: #E8A598;
+  --me-light: #F8E8E4;
+  --partner: #A8C4B8;
+  --partner-light: #E8F4F0;
+  --together: #C8B4D4;
+  --together-light: #F4EEF8;
+  --border: #EDE3DF;
+  --border-2: #D8CBC5;
+  --border-focus: #E8A598;
+  --danger: #E87070;
+  --danger-light: #FCEAEA;
+  --success: #70B890;
+  --success-light: #E8F5EE;
+  --holiday-kr: #E8A598;
+  --holiday-de: #9BAEC8;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Noto Sans KR', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  --radius: 0.75rem;
+
+  /* shadcn compat */
+  --background: 20 33% 98%;
+  --foreground: 15 25% 14%;
+  --card: 0 0% 100%;
+  --card-foreground: 15 25% 14%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 15 25% 14%;
+  --primary: 10 56% 75%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 10 50% 95%;
+  --secondary-foreground: 15 25% 14%;
+  --muted: 10 30% 94%;
+  --muted-foreground: 10 15% 50%;
+  --accent: 10 56% 75%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 60% 67%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 15 20% 90%;
+  --input: 15 20% 90%;
+  --ring: 10 56% 75%;
+}
+
+[data-theme="vintage"] {
+  --bg: #F5F0E8; --surface: #FEFCF8; --surface-2: #F0E8D8; --surface-3: #E8DCC8;
+  --text: #3D3528; --text-2: #7A7060; --text-3: #B0A898;
+  --accent: #C4A45C; --accent-dark: #A88838; --accent-light: #F4ECD8;
+  --border: #E0D8C8; --border-2: #D0C4B0;
+  --me: #C4A45C; --me-light: #F4ECD8; --partner: #9BAEC8; --partner-light: #E4ECF4;
+  --together: #B89878; --together-light: #F0E8DC;
+}
+
+[data-theme="dark"] {
+  --bg: #1A1A1A; --surface: #2D2D2D; --surface-2: #333333; --surface-3: #404040;
+  --text: #F0F0F0; --text-2: #A0A0A0; --text-3: #606060; --text-inv: #1A1A1A;
+  --accent: #E8A598; --accent-dark: #D4877A; --accent-light: #3D2D28;
+  --border: #404040; --border-2: #505050;
+  --me: #E8A598; --me-light: #3D2D28; --partner: #A8C4B8; --partner-light: #283D34;
+  --together: #C8B4D4; --together-light: #332840;
+}
+
+[data-theme="forest"] {
+  --bg: #F0F4F0; --surface: #FAFCFA; --surface-2: #E4ECE4; --surface-3: #D8E4D8;
+  --text: #1A2D1A; --text-2: #507050; --text-3: #90A890;
+  --accent: #7A9478; --accent-dark: #5C7A5A; --accent-light: #E0F0DE;
+  --border: #D0E0CE; --border-2: #B8D0B6;
+  --me: #7A9478; --me-light: #E0F0DE; --partner: #C4A45C; --partner-light: #F4ECD8;
+  --together: #6B8FC4; --together-light: #E0ECF8;
+}
+
+[data-theme="sky"] {
+  --bg: #F0F4F8; --surface: #FAFCFE; --surface-2: #E4ECF4; --surface-3: #D4E0F0;
+  --text: #1A2540; --text-2: #506080; --text-3: #90A0B8;
+  --accent: #6B8FC4; --accent-dark: #4A70A8; --accent-light: #E0ECF8;
+  --border: #D0DCE8; --border-2: #B8CCE0;
+  --me: #6B8FC4; --me-light: #E0ECF8; --partner: #E8A598; --partner-light: #F8E8E4;
+  --together: #9B8CC4; --together-light: #F0ECF8;
+}
+
+[data-theme="mono"] {
+  --bg: #F5F5F5; --surface: #FFFFFF; --surface-2: #EBEBEB; --surface-3: #E0E0E0;
+  --text: #1A1A1A; --text-2: #666666; --text-3: #AAAAAA;
+  --accent: #808080; --accent-dark: #555555; --accent-light: #E8E8E8;
+  --border: #DDDDDD; --border-2: #CCCCCC;
+  --me: #808080; --me-light: #E8E8E8; --partner: #A0A0A0; --partner-light: #EFEFEF;
+  --together: #707070; --together-light: #E0E0E0;
+}
+
+[data-theme="cute"] {
+  --bg: #FFF5F8; --surface: #FFFFFF; --surface-2: #FFF0F4; --surface-3: #FFE8EE;
+  --text: #40202A; --text-2: #905060; --text-3: #D0A0B0;
+  --accent: #E8728C; --accent-dark: #D05070; --accent-light: #FFE4EC;
+  --border: #F0D8E0; --border-2: #E8C8D4;
+  --me: #E8728C; --me-light: #FFE4EC; --partner: #72B8E8; --partner-light: #E4F0FF;
+  --together: #C88CE8; --together-light: #F4E4FF;
+  --font-display: 'Nunito', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input, textarea, select, button {
+  font-family: var(--font-body);
+}
+
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Hide scrollbars but allow scrolling */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
